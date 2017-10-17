@@ -1,0 +1,23 @@
+### This is the main way to configure the application (other than annotations).
+### This file is in Yaml format but you can also configure spring boot using the traditional
+### Java properties file format.
+server:
+  port: 8090
+
+spring.jpa:
+    hibernate.ddl-auto: none
+
+#management endpoints on a separate port
+management:
+  port: 8091
+  security:
+    enabled: false # management port is internal only. no need to secure it.
+
+---
+spring:
+  profiles: test
+  h2:
+    console:
+      enabled: true
+
+
