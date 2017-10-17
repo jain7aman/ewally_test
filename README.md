@@ -4,7 +4,8 @@
 
 This application is packaged as a jar which has Tomcat 8 embedded. No Tomcat or JBoss installation is necessary. You run it using the ```java -jar``` command.
 
-* Clone this repository 
+* Clone this repository ```git clone https://github.com/jain7aman/ewally_test.git```
+* Run ```cd ewally-test```
 * Make sure you are using JDK 1.8 and Maven 3.x
 * You can build the project and run the tests by running ```mvn clean package```
 * Once successfully built, you can run the service by one of these two methods:
@@ -18,18 +19,14 @@ or
 Once the application runs you should see something like this
 
 ```
-2017-08-30 17:31:23.091  INFO 19387 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8090 (http)
-2017-08-30 17:31:23.097  INFO 19387 --- [           main]  com.ewally.test.TicketInfoApplication        : Started Application in 22.285 seconds (JVM running for 23.032)
+2017-10-17 20:53:56.599  INFO 9684 --- [            main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8090 (http)
+2017-10-17 20:53:56.599  INFO 9684 --- [            main]  com.ewally.test.TicketInfoApplication        : Started Application in 22.285 seconds (JVM running for 23.032)
 ```
 
 ## About the Service
 
-The service is just a simple ticket REST service. It uses an in-memory database (H2) to store the data. You can also do with a relational database like MySQL or PostgreSQL. If your database connection properties work, you can call some REST endpoints defined in ```com.ewally.test.aj.web.service.TicketServiceController``` on **port 8090**. (see below)
+The service is just a simple ticket REST service. It uses an in-memory database (H2) to store the data.
 
-More interestingly, you can start calling some of the operational endpoints (see full list below) like ```/metrics``` and ```/health``` (these are available on **port 8091**)
-
-You can use this sample service to understand the conventions and configurations that allow you to create a DB-backed RESTful service. Once you understand and get comfortable with the sample app you can add your own services following the same patterns as the sample service.
- 
 Here is what this little application does:
 
 * Full integration with the latest **Spring** Framework: inversion of control, dependency injection, etc.
@@ -39,7 +36,6 @@ Here is what this little application does:
 * Exception mapping from application exceptions to the right HTTP response with exception details in the body
 * *Spring Data* Integration with JPA/Hibernate with just a few lines of configuration and familiar annotations. 
 * Automatic CRUD functionality against the data source using Spring *Repository* pattern
-* Demonstrates MockMVC test framework with associated libraries
 
 Here are some endpoints you can call:
 

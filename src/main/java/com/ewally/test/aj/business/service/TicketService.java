@@ -107,7 +107,7 @@ public class TicketService {
 
     private String generateBarCode(String ticketCode, String value, String expDateString) {
         // TODO generate bar code for the ticket
-        return "";
+        return "23792856266000000025152001324806173140000002";
     }
 
     private Date createDateFromDateString(String dateString) {
