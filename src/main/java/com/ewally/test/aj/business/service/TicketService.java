@@ -115,7 +115,7 @@ public class TicketService {
         barcodeArray[1] = 0;
         barcodeArray[2] = 1;
         barcodeArray[3] = 9; // Currency Code 9 (Real)
-        // barcodeArray[4] = 0; Digital bar oode checker, will be calculated in the last
+        // barcodeArray[4] = 0; Digital bar code checker, will be calculated in the last
         int maturityFactor = getMaturityFactor(expDate);
         int base = 1000;
         // Position 06 to 09
