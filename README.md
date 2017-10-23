@@ -25,7 +25,7 @@ Once the application runs you should see something like this
 
 ## About the Service
 
-The service is just a simple ticket REST service. It uses an in-memory database (H2) to store the data.
+The service is just a simple ticket REST service. It uses an in-memory database (H2) to store the data. You can call some REST endpoints defined in ```com.ewally.test.aj.web.service.TicketServiceController``` on **port 8090**. (see below)
 
 Here is what this little application does:
 
@@ -44,14 +44,14 @@ Here are some endpoints you can call:
 ```
 http://localhost:8091/env
 http://localhost:8091/health
-http://localhost:8091/info
 http://localhost:8091/metrics
 ```
 
 ### Create multiple ticket resource
 
 ```
-POST /ticket
+Port: 8090 (e.g., http://localhost:8090/ticket)
+POST: /ticket
 Accept: application/json
 Content-Type: application/json
 
@@ -75,7 +75,8 @@ Call will only succeed if all the tickets are valid and new. If any of the ticke
 ### Create single ticket resource
 
 ```
-POST /ticket/23792856266000000025152001324806173140000002001
+Port: 8090 (e.g., http://localhost:8090/ticket/23792856266000000025152001324806173140000002001)
+POST: /ticket/23792856266000000025152001324806173140000002001
 Accept: application/json
 Content-Type: application/json
 
@@ -93,7 +94,9 @@ Call will only succeed if the ticket is valid and new. Ticket is created only if
 ### Retrieve a ticket detail
 
 ```
-http://localhost:8090/ticket/23792856266000000025152001324806173140000002000
+Port: 8090 (e.g., http://localhost:8090/ticket/23792856266000000025152001324806173140000002000)
+GET: /ticket/23792856266000000025152001324806173140000002001
+Accept: application/json
 
 Response: HTTP 200 OK
 {
