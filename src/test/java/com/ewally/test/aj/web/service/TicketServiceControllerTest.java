@@ -186,12 +186,12 @@ public class TicketServiceControllerTest {
                 .andReturn();
     }
 
-    @Test
-    public void shouldIdentifyProperTicketType() throws Exception {
-        // TODO identify tickets based on its types
-
-
-    }
+//    @Test
+//    public void shouldIdentifyProperTicketType() throws Exception {
+//        // TODO identify tickets based on its types
+//
+//
+//    }
 
 
     /**********************Private Methods*************************/
